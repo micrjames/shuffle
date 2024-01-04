@@ -1,13 +1,13 @@
-const { range } = require("../range/range");
-const { shuffle } = require("./shuffle");
-const { Matrix } = require("../Matrix/Matrix");
+const { shuffle } = require("../shuffle");
 
-const numRows = 9;
-const numCols = 9;
-const array = [...range(81)];
-console.log(array);
-const shuffledArray = shuffle(array);
-console.log(shuffledArray);
-
-const slicedAndShuffledArray = shuffledArray.slice(0, 10);
-console.log(slicedAndShuffledArray);
+describe("An implementation of Fischer-Yates shuffle algorithm.", () => {
+   const numRows = 9;
+   const numCols = 9;
+   const array = Array.from({ length: numRows*numCols}, (_, i) => i);
+   test("Create an array of sequences.", () => {
+	  array.forEach((num, i) => {
+		 expect(num).toBe(i);
+	  });
+   });
+   test.todo("Each element of the array is not at its previous position in the array.");
+});
