@@ -9,5 +9,9 @@ describe("An implementation of Fischer-Yates shuffle algorithm.", () => {
 		 expect(num).toBe(i);
 	  });
    });
-   test.todo("Each element of the array is not at its previous position in the array.");
+   test("Each element of the array is not at its previous position in the array.", () => {
+	  const unshuffledArray = array;
+	  const shuffledArray = shuffle(array);
+	  expect(shuffledArray).not.toContainEqual(unshuffledArray);
+   });
 });

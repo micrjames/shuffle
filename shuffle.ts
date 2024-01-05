@@ -1,6 +1,7 @@
 const { Random } = require("../Random/Random");
 
 const shuffle = (array: number[]): number[] => {
+    // shuffle is done in place
     const randNum = new Random(0);
     let j: number;
     for(let i = array.length-1; i > 0; i--) {
@@ -9,8 +10,7 @@ const shuffle = (array: number[]): number[] => {
 	    
 	    [array[i], array[j]] = [array[j], array[i]];
 	}
-
-    return array;
+	return array;
 };
 
 exports.shuffle = shuffle;
