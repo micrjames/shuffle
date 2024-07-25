@@ -1,7 +1,7 @@
 {
   "name": "shuffle",
   "version": "1.0.0",
-  "description": "",
+  "description": "An implementation of Fisher-Yates shuffle algorithm.",
   "main": "index.js",
   "directories": {
     "test": "tests"
