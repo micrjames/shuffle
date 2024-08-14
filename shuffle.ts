@@ -1,6 +1,6 @@
-const { Random } = require("../Random/Random");
+import { Random } from "./Random/Random";
 
-const shuffle = (array: number[]): number[] => {
+export const shuffle = (array: number[]): number[] => {
     // shuffle is done in place
     const randNum = new Random(0);
     let j: number;
@@ -12,5 +12,3 @@ const shuffle = (array: number[]): number[] => {
 	}
 	return array;
 };
-
-exports.shuffle = shuffle;

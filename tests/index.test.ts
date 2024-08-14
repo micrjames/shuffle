@@ -1,4 +1,4 @@
-const { shuffle } = require("../shuffle");
+import { shuffle } from "../shuffle";
 
 describe("An implementation of Fischer-Yates shuffle algorithm.", () => {
    const numRows = 9;
